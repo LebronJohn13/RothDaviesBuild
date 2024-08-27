@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General Layout and Styling */
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.company-list {
+  width: 25%; /* Fixed 25% width for the company list */
+  margin-right: 20px; /* Space between the list and the rest of the page */
+}
+
+.company-list h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.company-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.company-item {
+  padding: 12px;
+  margin: 5px 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.company-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background for better visibility on mobile */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Ensure padding around modal on smaller screens */
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Full width for mobile */
+  max-width: 400px; /* Limit the maximum width */
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.2); /* Increase size on hover */
+  color: #ff0000; /* Change color to red on hover */
+}
+
+.close-button:active {
+  transform: scale(0.9); /* Shrink on click */
+  transition: transform 0.1s ease; /* Faster transition on click */
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 20px; /* Scaled font size for mobile */
+}
+
+.modal-content p {
+  margin: 10px 0;
+  font-size: 16px; /* Scaled font size for mobile */
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .company-list {
+    width: 100%; /* Full width on small screens */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Space between list and other content */
+  }
+
+  .company-item {
+    padding: 15px;
+    font-size: 18px; /* Slightly larger text for easier tapping */
+  }
+
+  .modal-content {
+    padding: 15px;
+    width: 90%; /* Make modal slightly smaller on mobile */
+  }
+
+  .close-button {
+    font-size: 22px; /* Slightly smaller close button for better fit */
   }
 }
