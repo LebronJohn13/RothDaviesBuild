@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 const dummyCompanies = [
@@ -28,6 +28,7 @@ const dummyCompanies = [
   { id: 24, name: 'Company X', floor: '', suite: '' },
   { id: 25, name: 'Company Y', floor: '', suite: '' },
   { id: 26, name: 'Company Z', floor: '', suite: '' },
+
 ];
 
 function CompanyList({ companies, onSelectCompany }) {
@@ -73,33 +74,6 @@ function CompanyModal({ selectedCompany, onClose }) {
 
 function App() {
   const [selectedCompany, setSelectedCompany] = useState(null);
-
-  useEffect(() => {
-    const requestFullScreen = () => {
-      const elem = document.documentElement;
-
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.mozRequestFullScreen) { // Firefox
-        elem.mozRequestFullScreen();
-      } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) { // IE/Edge
-        elem.msRequestFullscreen();
-      }
-    };
-
-    // Request fullscreen when the component mounts
-    requestFullScreen();
-
-    // Optionally, you can add an event listener to handle exit full screen cases
-    document.addEventListener('fullscreenchange', () => {
-      if (!document.fullscreenElement) {
-        requestFullScreen(); // Re-enter fullscreen when exiting
-      }
-    });
-
-  }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
     <div className="app-container">
