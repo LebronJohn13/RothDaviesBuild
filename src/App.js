@@ -5,6 +5,7 @@ const dummyCompanies = [
   { id: 1, name: 'Company A', floor: '', suite: '' },
   { id: 2, name: 'Company B', floor: '', suite: '' },
   { id: 3, name: 'Company C', floor: '', suite: '' },
+  { id: 4, name: 'Company D', floor: '', suite: '' },
 ];
 
 function CompanyList({ companies, onSelectCompany }) {
