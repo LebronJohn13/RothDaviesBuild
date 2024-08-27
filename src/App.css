@@ -1,4 +1,8 @@
 /* General Layout and Styling */
+html {
+  max-height: 1000px;
+}
+
 .app-container {
   display: flex;
   padding: 20px;
