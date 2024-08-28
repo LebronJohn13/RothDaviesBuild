@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import building from './assets/building.jpg';
 
 const dummyCompanies = [
   { id: 1, name: 'Company A', floor: '', suite: '' },
@@ -28,7 +29,7 @@ const dummyCompanies = [
   { id: 24, name: 'Company X', floor: '', suite: '' },
   { id: 25, name: 'Company Y', floor: '', suite: '' },
   { id: 26, name: 'Company Z', floor: '', suite: '' },
-
+  // Add more companies here...
 ];
 
 function CompanyList({ companies, onSelectCompany }) {
@@ -48,10 +49,9 @@ function CompanyList({ companies, onSelectCompany }) {
 
 function CompanyModal({ selectedCompany, onClose }) {
   if (!selectedCompany) {
-    return null; // Don't render anything if no company is selected
+    return null;
   }
 
-  // Handle clicks on the modal background
   const handleBackgroundClick = (e) => {
     if (e.target.className === 'modal-overlay') {
       onClose();
@@ -77,6 +77,12 @@ function App() {
 
   return (
     <div className="app-container">
+      <header className="header">
+        <img src={building} alt="Building" className="building-image" />
+        <div className="header-overlay">
+          <h1 className="header-title">Building Directory</h1>
+        </div>
+      </header>
       <CompanyList
         companies={dummyCompanies}
         onSelectCompany={(company) => setSelectedCompany(company)}
