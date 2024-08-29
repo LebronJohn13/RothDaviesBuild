@@ -95,7 +95,6 @@
   max-width: 20rem;
   flex: 1 1 calc(33.333% - 2rem);
   box-sizing: border-box;
-  color: #300A54; /* Text color */
 }
 
 .company-item:hover {
