@@ -17,6 +17,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.5; /* Add transparency to the image for a blended effect */
 }
 
 .header-overlay {
@@ -25,16 +26,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header-title {
   color: white;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.header-company{
+  color: white;
 }
 
 /* Landing Page Styles */
@@ -54,12 +59,15 @@
   font-size: 1.5rem;
   border: none;
   border-radius: 0.5rem;
+  background-color: #501B7E; /* Button background color */
+  color: white; /* Button text color */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .landing-buttons button:hover {
-  background-color: #ddd;
+  background-color: #300A54; /* Darker shade on hover */
+  transform: translateY(-0.2rem);
 }
 
 /* Company/Person List Styles */
@@ -87,6 +95,7 @@
   max-width: 20rem;
   flex: 1 1 calc(33.333% - 2rem);
   box-sizing: border-box;
+  color: #300A54; /* Text color */
 }
 
 .company-item:hover {
@@ -104,12 +113,15 @@
   font-size: 1rem;
   border: none;
   border-radius: 0.5rem;
+  background-color: #501B7E; /* Button background color */
+  color: white; /* Button text color */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .back-button button:hover {
-  background-color: #ddd;
+  background-color: #300A54; /* Darker shade on hover */
+  transform: translateY(-0.2rem);
 }
 
 /* Modal Styles */
@@ -133,6 +145,7 @@
   width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
+  color: #300A54; /* Text color */
 }
 
 .close-button {
@@ -142,6 +155,7 @@
   background: none;
   border: none;
   font-size: 2.4rem;
+  color: #300A54; /* Close button color */
   cursor: pointer;
   transition: color 0.3s ease;
 }

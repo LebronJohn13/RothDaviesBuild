@@ -5,12 +5,37 @@ import building from './assets/building.jpg';
 const dummyCompanies = [
   { id: 1, name: 'Company A', floor: '', suite: '' },
   { id: 2, name: 'Company B', floor: '', suite: '' },
+  { id: 3, name: 'Company C', floor: '', suite: '' },
+  { id: 4, name: 'Company D', floor: '', suite: '' },
+  { id: 5, name: 'Company E', floor: '', suite: '' },
+  { id: 6, name: 'Company F', floor: '', suite: '' },
+  { id: 7, name: 'Company G', floor: '', suite: '' },
+  { id: 8, name: 'Company H', floor: '', suite: '' },
+  { id: 9, name: 'Company I', floor: '', suite: '' },
+  { id: 10, name: 'Company J', floor: '', suite: '' },
+  { id: 11, name: 'Company K', floor: '', suite: '' },
+  { id: 12, name: 'Company L', floor: '', suite: '' },
+  { id: 13, name: 'Company M', floor: '', suite: '' },
+  { id: 14, name: 'Company N', floor: '', suite: '' },
+  { id: 15, name: 'Company O', floor: '', suite: '' },
+  { id: 16, name: 'Company P', floor: '', suite: '' },
+  { id: 17, name: 'Company Q', floor: '', suite: '' },
+  { id: 18, name: 'Company R', floor: '', suite: '' },
+  { id: 19, name: 'Company S', floor: '', suite: '' },
+  { id: 20, name: 'Company T', floor: '', suite: '' },
+  { id: 21, name: 'Company U', floor: '', suite: '' },
+  { id: 22, name: 'Company V', floor: '', suite: '' },
+  { id: 23, name: 'Company W', floor: '', suite: '' },
+  { id: 24, name: 'Company X', floor: '', suite: '' },
+  { id: 25, name: 'Company Y', floor: '', suite: '' },
+  { id: 26, name: 'Company Z', floor: '', suite: '' },
   // More companies...
 ];
 
 const dummyPeople = [
-  { id: 1, name: 'John Doe', title: 'Lawyer' },
-  { id: 2, name: 'Jane Smith', title: 'Doctor' },
+  { id: 1, name: 'John Doe', company: 'Company A' },
+  { id: 2, name: 'Jane Smith', company: 'Company B' },
+  { id: 3, name: 'Alice Johnson', company: 'Company C' },
   // More people...
 ];
 
@@ -58,7 +83,7 @@ function PersonList({ people, onSelectPerson, onBack }) {
       <ul>
         {people.map((person) => (
           <li key={person.id} onClick={() => onSelectPerson(person)} className="company-item">
-            {person.name} - {person.title}
+            {person.name} - {person.company}
           </li>
         ))}
       </ul>
@@ -90,7 +115,7 @@ function Modal({ selectedItem, onClose, isCompany }) {
             <p>Suite: {selectedItem.suite || 'N/A'}</p>
           </>
         ) : (
-          <p>Title: {selectedItem.title || 'N/A'}</p>
+          <p>Company: {selectedItem.company || 'N/A'}</p>
         )}
       </div>
     </div>
@@ -128,7 +153,7 @@ function App() {
       <header className="header">
         <img src={building} alt="Building" className="building-image" />
         <div className="header-overlay">
-          <h1 className="header-title">Deer Creek Office</h1>
+          <h1 className="header-company">Deer Creek Office</h1>
         </div>
       </header>
 
