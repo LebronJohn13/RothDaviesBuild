@@ -9,7 +9,7 @@
 /* Header Styles */
 .header {
   position: relative;
-  height: 25vh; /* Use viewport height */
+  height: 25vh;
   overflow: hidden;
 }
 
@@ -33,11 +33,36 @@
 
 .header-title {
   color: white;
-  font-size: 3rem; /* Use relative units */
+  font-size: 3rem;
   font-weight: bold;
 }
 
-/* Company List Styles */
+/* Landing Page Styles */
+.landing-page {
+  margin-top: 3rem;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.landing-buttons button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-buttons button:hover {
+  background-color: #ddd;
+}
+
+/* Company/Person List Styles */
 .company-list {
   margin: 2rem 0;
 }
@@ -46,8 +71,8 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  list-style-type: none; /* Remove bullets */
-  justify-content: center; /* Center the items horizontally */
+  list-style-type: none;
+  justify-content: center;
 }
 
 .company-item {
@@ -59,14 +84,32 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  max-width: 20rem; /* Adjust the width as needed */
-  flex: 1 1 calc(33.333% - 2rem); /* Adjust the percentage as needed */
+  max-width: 20rem;
+  flex: 1 1 calc(33.333% - 2rem);
   box-sizing: border-box;
 }
 
 .company-item:hover {
   transform: translateY(-0.2rem);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Button Styles */
+.back-button {
+  margin-bottom: 1rem;
+}
+
+.back-button button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button button:hover {
+  background-color: #ddd;
 }
 
 /* Modal Styles */
