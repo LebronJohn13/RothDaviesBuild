@@ -144,7 +144,6 @@
   width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  color: #300A54; /* Text color */
 }
 
 .close-button {
@@ -154,7 +153,6 @@
   background: none;
   border: none;
   font-size: 2.4rem;
-  color: #300A54; /* Close button color */
   cursor: pointer;
   transition: color 0.3s ease;
 }
