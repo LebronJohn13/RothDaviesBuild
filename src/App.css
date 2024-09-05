@@ -92,9 +92,18 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  max-width: 20rem;
-  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 20rem; /* Adjust the width as needed */
+  flex: 1 1 calc(33.333% - 2rem); /* Adjust the percentage as needed */
   box-sizing: border-box;
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.company-logo {
+  width: 50px; /* Set the desired width */
+  height: 50px; /* Set the desired height */
+  object-fit: contain; /* Ensure the logo fits within the specified dimensions */
+  margin-right: 1rem; /* Space between the logo and the company name */
 }
 
 .company-item:hover {
