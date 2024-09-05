@@ -100,8 +100,8 @@
 }
 
 .company-logo {
-  width: 50px; /* Set the desired width */
-  height: 50px; /* Set the desired height */
+  width: 100px; /* Set the desired width */
+  height: 75px; /* Set the desired height */
   object-fit: contain; /* Ensure the logo fits within the specified dimensions */
   margin-right: 1rem; /* Space between the logo and the company name */
 }
