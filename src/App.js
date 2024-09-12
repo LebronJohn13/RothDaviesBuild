@@ -54,43 +54,43 @@ const dummyCompanies = [
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 const dummyPeople = [
-  { id: 1, name: 'Jennifer Brown, MD', company: 'Advent Health' },
-  { id: 2, name: 'Matthew Swan, MD', company: 'Advent Health' },
-  { id: 3, name: 'Kassandra Johns, APRN', company: 'Advent Health' },
-  { id: 4, name: 'Amy Krause', company: 'Amy Krause Design LLC' },
-  { id: 5, name: 'Scott Swimmer', company: 'Auto Risk' },
-  { id: 6, name: 'Brian Candler', company: 'Cabin Securities' },
-  { id: 7, name: 'Jonathan Brobst', company: 'Carlson Finanical' },
-  { id: 8, name: 'Alex Hammersley', company: 'Carlson Finanical' },
-  { id: 9, name: 'Charlie Isaacson', company: 'CCI Accounting' },
-  { id: 10, name: 'Landon Tarvin', company: 'Deckorators' },
-  { id: 11, name: 'Silverus Kimeli', company: 'Deer Creek Behavioral Health' },
-  { id: 12, name: 'Abbas Haideri', company: 'Dezines LLC' },
-  { id: 13, name: 'Dr. Victoria Haynes', company: 'Haynes Health and Wellness' },
-  { id: 14, name: 'Robert Dieterle', company: 'Enable Care LLC' },
-  { id: 15, name: 'Jim Flexman', company: 'Flexman CPA' },
-  { id: 16, name: 'Jimmy Flexman', company: 'Flexman CPA' },
-  { id: 17, name: 'Jack Hannah', company: 'GeoWealth Management'},
-  { id: 18, name: 'Jessica Kimbrell', company: 'Kimbrell Estate Planning' },
-  { id: 19, name: 'Julie Kincaid', company: 'KPM Advantage' },
-  { id: 20, name: 'Brenda Black', company: 'Legacy Investments' },
-  { id: 21, name: 'David Baker', company: 'Legacy Investments' },
-  { id: 22, name: 'David Goeglein', company: 'Legacy Investments' },
-  { id: 23, name: 'Nathalie Cabensag', company: 'Legacy Investments' },
-  { id: 24, name: 'Brain Wall', company: 'LPL Financial' },
-  { id: 25, name: 'Jeff Mize', company: 'Midwest Hyperbaric' },
-  { id: 26, name: 'Tiffany Hamm', company: 'Midwest Hyperbaric' },
-  { id: 27, name: 'Pat Ryan', company: 'Prospera Financial Advisors' },
-  { id: 28, name: 'Amber Stevens', company: 'Amber Waves Electrology' },
-  { id: 29, name: 'Lisa Blue', company: 'Pulse Electrolysis' },
-  { id: 30, name: 'Jon Stanfield', company: 'Rees Kincaid Stanfield' },
-  { id: 31, name: 'Terry Rees', company: 'Rees Kincaid Stanfield' },
-  { id: 32, name: 'Cody Schwope', company: 'Topline Steel' },
-  { id: 33, name: 'Brandan Davies', company: 'Roth Davies LLC' },
-  { id: 34, name: 'Jason Roth', company: 'Roth Davies LLC' },
-  { id: 35, name: 'Collin Huerter', company: 'Roth Davies LLC' },
-  { id: 36, name: 'Lauren Fields', company: 'Roth Davies LLC' },
-  { id: 37, name: 'Zach Thomas', company: 'Roth Davies LLC' },
+  { id: 1, name: 'Jennifer Brown, MD', company: 'Advent Health' , floor: '1st Floor', suite: '150'},
+  { id: 2, name: 'Matthew Swan, MD', company: 'Advent Health' , floor: '1st Floor', suite: '150'},
+  { id: 3, name: 'Kassandra Johns, APRN', company: 'Advent Health' , floor: '1st Floor', suite: '150'},
+  { id: 4, name: 'Amy Krause', company: 'Amy Krause Design LLC' , floor: '2nd Floor', suite: '200'},
+  { id: 5, name: 'Scott Swimmer', company: 'Auto Risk' , floor: '2nd Floor', suite: '200'},
+  { id: 6, name: 'Brian Candler', company: 'Cabin Securities' , floor: '2nd Floor', suite: '200'},
+  { id: 7, name: 'Jonathan Brobst', company: 'Carlson Finanical' , floor: '2nd Floor', suite: '200'},
+  { id: 8, name: 'Alex Hammersley', company: 'Carlson Finanical' , floor: '2nd Floor', suite: '200'},
+  { id: 9, name: 'Charlie Isaacson', company: 'CCI Accounting' , floor: '2nd Floor', suite: '200'},
+  { id: 10, name: 'Landon Tarvin', company: 'Deckorators' , floor: '2nd Floor', suite: '200'},
+  { id: 11, name: 'Silverus Kimeli', company: 'Deer Creek Behavioral Health' , floor: '2nd Floor', suite: '200'},
+  { id: 12, name: 'Abbas Haideri', company: 'Dezines LLC' , floor: '2nd Floor', suite: '200'},
+  { id: 13, name: 'Dr. Victoria Haynes', company: 'Haynes Health and Wellness' , floor: '2nd Floor', suite: '200'},
+  { id: 14, name: 'Robert Dieterle', company: 'Enable Care LLC' , floor: '2nd Floor', suite: '200'},
+  { id: 15, name: 'Jim Flexman', company: 'Flexman CPA' , floor: '2nd Floor', suite: '200'},
+  { id: 16, name: 'Jimmy Flexman', company: 'Flexman CPA' , floor: '2nd Floor', suite: '200'},
+  { id: 17, name: 'Jack Hannah', company: 'GeoWealth Management', floor: '2nd Floor', suite: '200' },
+  { id: 18, name: 'Jessica Kimbrell', company: 'Kimbrell Estate Planning' , floor: '1st Floor', suite: '100'},
+  { id: 19, name: 'Julie Kincaid', company: 'KPM Advantage' , floor: '2nd Floor', suite: '200'},
+  { id: 20, name: 'Brenda Black', company: 'Legacy Investments' , floor: '1st Floor', suite: '175'},
+  { id: 21, name: 'David Baker', company: 'Legacy Investments' , floor: '1st Floor', suite: '175'},
+  { id: 22, name: 'David Goeglein', company: 'Legacy Investments' , floor: '1st Floor', suite: '175'},
+  { id: 23, name: 'Nathalie Cabensag', company: 'Legacy Investments' , floor: '1st Floor', suite: '175'},
+  { id: 24, name: 'Brain Wall', company: 'LPL Financial' , floor: '2nd Floor', suite: '200'},
+  { id: 25, name: 'Jeff Mize', company: 'Midwest Hyperbaric' , floor: '2nd Floor', suite: '200'},
+  { id: 26, name: 'Tiffany Hamm', company: 'Midwest Hyperbaric' , floor: '2nd Floor', suite: '200'},
+  { id: 27, name: 'Pat Ryan', company: 'Prospera Financial Advisors' , floor: '1st Floor', suite: '100'},
+  { id: 28, name: 'Amber Stevens', company: 'Amber Waves Electrology' , floor: '', suite: ''},
+  { id: 29, name: 'Lisa Blue', company: 'Pulse Electrolysis' , floor: '1st Floor', suite: '100'},
+  { id: 30, name: 'Jon Stanfield', company: 'Rees Kincaid Stanfield' , floor: '1st Floor', suite: '100'},
+  { id: 31, name: 'Terry Rees', company: 'Rees Kincaid Stanfield' , floor: '1st Floor', suite: '100'},
+  { id: 32, name: 'Cody Schwope', company: 'Topline Steel' , floor: '2nd Floor', suite: '200'},
+  { id: 33, name: 'Brandan Davies', company: 'Roth Davies LLC' , floor: '2nd Floor', suite: '250'},
+  { id: 34, name: 'Jason Roth', company: 'Roth Davies LLC' , floor: '2nd Floor', suite: '250'},
+  { id: 35, name: 'Collin Huerter', company: 'Roth Davies LLC' , floor: '2nd Floor', suite: '250'},
+  { id: 36, name: 'Lauren Fields', company: 'Roth Davies LLC' , floor: '2nd Floor', suite: '250'},
+  { id: 37, name: 'Zach Thomas', company: 'Roth Davies LLC' , floor: '2nd Floor', suite: '250'},
 
   // More people...
 ];
@@ -172,7 +172,10 @@ function Modal({ selectedItem, onClose, isCompany }) {
             <p>Suite: {selectedItem.suite || 'N/A'}</p>
           </>
         ) : (
-          <p>Company: {selectedItem.company || 'N/A'}</p>
+          <>
+          <p>Floor: {selectedItem.floor || 'N/A'}</p>
+          <p>Suite: {selectedItem.suite || 'N/A'}</p>
+          </>
         )}
       </div>
     </div>
